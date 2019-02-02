@@ -50,12 +50,29 @@ navItems[3].innerText = siteContent.nav['nav-item-4'];
 navItems[4].innerText = siteContent.nav['nav-item-5'];
 navItems[5].innerText = siteContent.nav['nav-item-6'];
 
-navItems[0].style.color = 'blue';
-navItems[1].style.color = 'blue';
-navItems[2].style.color = 'blue';
-navItems[3].style.color = 'blue';
-navItems[4].style.color = 'blue';
-navItems[5].style.color = 'blue';
+let careers = document.createElement('a');
+let signUp = document.createElement('a');
+
+let navHold = document.querySelector('header nav');
+navHold.prepend(careers);
+navHold.appendChild(signUp);
+
+careers.innerText = 'Careers';
+signUp.innerText = 'Sign Up';
+
+careers.href = '#';
+signUp.href = '#';
+
+//how to turn new anchors green?
+
+navItems[0].style.color = 'green';
+navItems[1].style.color = 'green';
+navItems[2].style.color = 'green';
+navItems[3].style.color = 'green';
+navItems[4].style.color = 'green';
+navItems[5].style.color = 'green';
+
+console.log(navItems);
 
 let ctaText = document.querySelector('.cta .cta-text h1');
 ctaText.innerText = siteContent.cta['h1'];
@@ -93,6 +110,28 @@ let bottomContentText = document.querySelectorAll('.bottom-content .text-content
 bottomContentText[0].innerText = siteContent['main-content']['services-content'];
 bottomContentText[1].innerText = siteContent['main-content']['product-content'];
 bottomContentText[2].innerText = siteContent['main-content']['vision-content'];
+
+let contactInfo = document.querySelector('.contact h4 ') //Why didnt all work ?
+
+
+contactInfo.innerText = siteContent['contact']['contact-h4'];
+
+let contactText = document.querySelectorAll('.contact p');
+
+
+contactText[0].innerText = siteContent['contact']['address'];
+contactText[1].innerText = siteContent['contact']['phone'];
+contactText[2].innerText = siteContent['contact']['email'];
+
+let footerInfo = document.querySelector('footer p'); //why did this work but not other hmm
+
+footerInfo.innerText = siteContent.footer['copyright'];
+
+
+
+
+
+
 
 
 
